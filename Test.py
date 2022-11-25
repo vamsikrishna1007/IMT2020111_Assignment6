@@ -1,21 +1,21 @@
 import unittest
-from sum import sum
-class Testsum(unittest.TestCase):
-    def test_sum1(self):
-        result = sum(4,1)
-        self.assertEqual(result,5)
-    def test_sum2(self):
-        result = sum(2,2)
+from ncr import nCr
+class TestnCr(unittest.TestCase):
+    def test_nCr1(self):
+        result = nCr(4,1)
         self.assertEqual(result,4)
-    def test_sum3(self):
-        result = sum(7,0)
+    def test_nCr2(self):
+        result = nCr(2,2)
+        self.assertEqual(result,1)
+    def test_nCr3(self):
+        result = nCr(7,0)
+        self.assertEqual(result,1)
+    def test_nCr4(self):
+        result = nCr(7,2)
         self.assertEqual(result,7)
-    def test_sum4(self):
-        result = sum(7,2)
+    def test_nCr5(self):
+        result = nCr(6,3)
         self.assertEqual(result,4)
-    def test_sum5(self):
-        result = sum(6,8)
-        self.assertEqual(result,5)
 
 if __name__ == '__main__':
     unittest.main()
